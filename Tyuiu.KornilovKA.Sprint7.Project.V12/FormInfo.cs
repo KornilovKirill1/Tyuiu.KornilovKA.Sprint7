@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,21 @@ using System.Windows.Forms;
 
 namespace Tyuiu.KornilovKA.Sprint7.Project.V12
 {
-    public partial class FormMain : Form
+    public partial class FormInfo : Form
     {
-        public FormMain()
+        public FormInfo()
         {
             InitializeComponent();
         }
 
-        private void toolStripButtonInfoProgram_KKA_Click(object sender, EventArgs e)
+        private void buttonDone_KKA_Click(object sender, EventArgs e)
         {
-            FormInfo info = new FormInfo();
-            info.ShowDialog();
+            this.Close();
+        }
+
+        private void pictureBoxDeveloper_KKA_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://vk.com/kilian_enjiz");
         }
     }
 }
