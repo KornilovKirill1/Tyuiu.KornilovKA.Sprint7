@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\W6opSFB5UWw.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.KornilovKA.Sprint7.Project.V12.Lib\Tyuiu.KornilovKA.Sprint7.Project.V12.Lib.csproj">
+      <Project>{23a43e36-f18d-4e37-bfe1-14d9e2ea99bf}</Project>
+      <Name>Tyuiu.KornilovKA.Sprint7.Project.V12.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
