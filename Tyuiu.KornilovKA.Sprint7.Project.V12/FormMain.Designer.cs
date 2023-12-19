@@ -29,289 +29,399 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.toolStripUpperPanel_KKA = new System.Windows.Forms.ToolStrip();
+            this.components = new System.ComponentModel.Container();
+            this.panelUpper_KKA = new System.Windows.Forms.Panel();
             this.panelMenu_KKA = new System.Windows.Forms.Panel();
+            this.panelPC_KKA = new System.Windows.Forms.Panel();
+            this.dataGridViewPC_KKA = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSeller_KKA = new System.Windows.Forms.DataGridView();
+            this.panelTitle_KKA = new System.Windows.Forms.Panel();
+            this.textBoxTitle_KKA = new System.Windows.Forms.TextBox();
+            this.panelAboutButton_KKA = new System.Windows.Forms.Panel();
+            this.toolTipHelp_KKA = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonAbout_KKA = new System.Windows.Forms.Button();
             this.buttonManual_KKA = new System.Windows.Forms.Button();
-            this.buttonChangedMainOnManufacturer_KKA = new System.Windows.Forms.Button();
-            this.panelDataGrid_KKA = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.buttonAddNewPC_KKA = new System.Windows.Forms.Button();
-            this.textBoxClockFrequency_KKA = new System.Windows.Forms.TextBox();
-            this.textBoxTypeCPU_KKA = new System.Windows.Forms.TextBox();
+            this.buttonSeller_KKA = new System.Windows.Forms.Button();
+            this.buttonPC_KKA = new System.Windows.Forms.Button();
+            this.groupBoxDataPC_KKA = new System.Windows.Forms.GroupBox();
+            this.groupBoxDataSeller_KKA = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxManufacturer_KKA = new System.Windows.Forms.TextBox();
-            this.dataGridViewTable_KKA = new System.Windows.Forms.DataGridView();
-            this.openFileDialogTable_KKA = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialogNewData_KKA = new System.Windows.Forms.SaveFileDialog();
+            this.textBoxTypeCPU_KKA = new System.Windows.Forms.TextBox();
             this.numericUpDownCountCore_KKA = new System.Windows.Forms.NumericUpDown();
+            this.textBoxClockFrequency_KKA = new System.Windows.Forms.TextBox();
             this.numericUpDownCountMemory_KKA = new System.Windows.Forms.NumericUpDown();
             this.textBoxCountDisk_KKA = new System.Windows.Forms.TextBox();
             this.dateTimePickerRelease_KKA = new System.Windows.Forms.DateTimePicker();
-            this.buttonChangedMainonPC_KKA = new System.Windows.Forms.Button();
-            this.toolStripButtonInfoProgram_KKA = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButtonFile_KKA = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ToolStripMenuItemOpen_KKA = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripMenuItemSave_KKA = new System.Windows.Forms.ToolStripMenuItem();
             this.textBoxPrice_KKA = new System.Windows.Forms.TextBox();
-            this.toolStripUpperPanel_KKA.SuspendLayout();
+            this.buttonAddNewPC_KKA = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panelUpper_KKA.SuspendLayout();
             this.panelMenu_KKA.SuspendLayout();
-            this.panelDataGrid_KKA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable_KKA)).BeginInit();
+            this.panelPC_KKA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPC_KKA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSeller_KKA)).BeginInit();
+            this.panelTitle_KKA.SuspendLayout();
+            this.panelAboutButton_KKA.SuspendLayout();
+            this.groupBoxDataPC_KKA.SuspendLayout();
+            this.groupBoxDataSeller_KKA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCountCore_KKA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCountMemory_KKA)).BeginInit();
             this.SuspendLayout();
             // 
-            // toolStripUpperPanel_KKA
+            // panelUpper_KKA
             // 
-            this.toolStripUpperPanel_KKA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonInfoProgram_KKA,
-            this.toolStripDropDownButtonFile_KKA});
-            this.toolStripUpperPanel_KKA.Location = new System.Drawing.Point(0, 0);
-            this.toolStripUpperPanel_KKA.Name = "toolStripUpperPanel_KKA";
-            this.toolStripUpperPanel_KKA.Size = new System.Drawing.Size(928, 25);
-            this.toolStripUpperPanel_KKA.TabIndex = 0;
-            this.toolStripUpperPanel_KKA.Text = "toolStrip1";
+            this.panelUpper_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(105)))), ((int)(((byte)(170)))));
+            this.panelUpper_KKA.Controls.Add(this.panelTitle_KKA);
+            this.panelUpper_KKA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUpper_KKA.Location = new System.Drawing.Point(0, 0);
+            this.panelUpper_KKA.Name = "panelUpper_KKA";
+            this.panelUpper_KKA.Size = new System.Drawing.Size(933, 76);
+            this.panelUpper_KKA.TabIndex = 0;
             // 
             // panelMenu_KKA
             // 
-            this.panelMenu_KKA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMenu_KKA.Controls.Add(this.buttonManual_KKA);
-            this.panelMenu_KKA.Controls.Add(this.buttonChangedMainOnManufacturer_KKA);
-            this.panelMenu_KKA.Controls.Add(this.buttonChangedMainonPC_KKA);
+            this.panelMenu_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.panelMenu_KKA.Controls.Add(this.panelAboutButton_KKA);
+            this.panelMenu_KKA.Controls.Add(this.buttonSeller_KKA);
+            this.panelMenu_KKA.Controls.Add(this.buttonPC_KKA);
             this.panelMenu_KKA.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu_KKA.Location = new System.Drawing.Point(0, 25);
+            this.panelMenu_KKA.Location = new System.Drawing.Point(0, 76);
             this.panelMenu_KKA.Name = "panelMenu_KKA";
-            this.panelMenu_KKA.Size = new System.Drawing.Size(200, 425);
+            this.panelMenu_KKA.Size = new System.Drawing.Size(215, 443);
             this.panelMenu_KKA.TabIndex = 1;
+            // 
+            // panelPC_KKA
+            // 
+            this.panelPC_KKA.Controls.Add(this.groupBoxDataPC_KKA);
+            this.panelPC_KKA.Controls.Add(this.dataGridViewSeller_KKA);
+            this.panelPC_KKA.Controls.Add(this.dataGridViewPC_KKA);
+            this.panelPC_KKA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPC_KKA.Location = new System.Drawing.Point(215, 76);
+            this.panelPC_KKA.Name = "panelPC_KKA";
+            this.panelPC_KKA.Padding = new System.Windows.Forms.Padding(5);
+            this.panelPC_KKA.Size = new System.Drawing.Size(718, 443);
+            this.panelPC_KKA.TabIndex = 2;
+            // 
+            // dataGridViewPC_KKA
+            // 
+            this.dataGridViewPC_KKA.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewPC_KKA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPC_KKA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridViewPC_KKA.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewPC_KKA.Name = "dataGridViewPC_KKA";
+            this.dataGridViewPC_KKA.Size = new System.Drawing.Size(708, 253);
+            this.dataGridViewPC_KKA.TabIndex = 0;
+            this.dataGridViewPC_KKA.Visible = false;
+            // 
+            // dataGridViewSeller_KKA
+            // 
+            this.dataGridViewSeller_KKA.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewSeller_KKA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSeller_KKA.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewSeller_KKA.Name = "dataGridViewSeller_KKA";
+            this.dataGridViewSeller_KKA.Size = new System.Drawing.Size(708, 253);
+            this.dataGridViewSeller_KKA.TabIndex = 1;
+            this.dataGridViewSeller_KKA.Visible = false;
+            // 
+            // panelTitle_KKA
+            // 
+            this.panelTitle_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTitle_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.panelTitle_KKA.Controls.Add(this.textBoxTitle_KKA);
+            this.panelTitle_KKA.Location = new System.Drawing.Point(215, 0);
+            this.panelTitle_KKA.Name = "panelTitle_KKA";
+            this.panelTitle_KKA.Size = new System.Drawing.Size(718, 76);
+            this.panelTitle_KKA.TabIndex = 0;
+            // 
+            // textBoxTitle_KKA
+            // 
+            this.textBoxTitle_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(150)))), ((int)(((byte)(243)))));
+            this.textBoxTitle_KKA.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTitle_KKA.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxTitle_KKA.ForeColor = System.Drawing.Color.White;
+            this.textBoxTitle_KKA.Location = new System.Drawing.Point(0, 21);
+            this.textBoxTitle_KKA.Name = "textBoxTitle_KKA";
+            this.textBoxTitle_KKA.ReadOnly = true;
+            this.textBoxTitle_KKA.Size = new System.Drawing.Size(718, 36);
+            this.textBoxTitle_KKA.TabIndex = 0;
+            this.textBoxTitle_KKA.TabStop = false;
+            this.textBoxTitle_KKA.Text = "Учет ЭВМ";
+            this.textBoxTitle_KKA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panelAboutButton_KKA
+            // 
+            this.panelAboutButton_KKA.Controls.Add(this.buttonAbout_KKA);
+            this.panelAboutButton_KKA.Controls.Add(this.buttonManual_KKA);
+            this.panelAboutButton_KKA.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelAboutButton_KKA.Location = new System.Drawing.Point(0, 383);
+            this.panelAboutButton_KKA.Name = "panelAboutButton_KKA";
+            this.panelAboutButton_KKA.Size = new System.Drawing.Size(215, 60);
+            this.panelAboutButton_KKA.TabIndex = 2;
+            // 
+            // buttonAbout_KKA
+            // 
+            this.buttonAbout_KKA.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonAbout_KKA.FlatAppearance.BorderSize = 0;
+            this.buttonAbout_KKA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAbout_KKA.Image = global::Tyuiu.KornilovKA.Sprint7.Project.V12.Properties.Resources.about;
+            this.buttonAbout_KKA.Location = new System.Drawing.Point(108, 0);
+            this.buttonAbout_KKA.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAbout_KKA.Name = "buttonAbout_KKA";
+            this.buttonAbout_KKA.Size = new System.Drawing.Size(107, 60);
+            this.buttonAbout_KKA.TabIndex = 1;
+            this.buttonAbout_KKA.UseVisualStyleBackColor = true;
+            this.buttonAbout_KKA.Click += new System.EventHandler(this.buttonAbout_KKA_Click);
             // 
             // buttonManual_KKA
             // 
-            this.buttonManual_KKA.Location = new System.Drawing.Point(0, 382);
+            this.buttonManual_KKA.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonManual_KKA.FlatAppearance.BorderSize = 0;
+            this.buttonManual_KKA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonManual_KKA.Image = global::Tyuiu.KornilovKA.Sprint7.Project.V12.Properties.Resources.user;
+            this.buttonManual_KKA.Location = new System.Drawing.Point(0, 0);
+            this.buttonManual_KKA.Margin = new System.Windows.Forms.Padding(0);
             this.buttonManual_KKA.Name = "buttonManual_KKA";
-            this.buttonManual_KKA.Size = new System.Drawing.Size(200, 44);
-            this.buttonManual_KKA.TabIndex = 2;
-            this.buttonManual_KKA.Text = "Руководство пользователя";
+            this.buttonManual_KKA.Size = new System.Drawing.Size(107, 60);
+            this.buttonManual_KKA.TabIndex = 0;
             this.buttonManual_KKA.UseVisualStyleBackColor = true;
+            this.buttonManual_KKA.Click += new System.EventHandler(this.buttonManual_KKA_Click);
             // 
-            // buttonChangedMainOnManufacturer_KKA
+            // buttonSeller_KKA
             // 
-            this.buttonChangedMainOnManufacturer_KKA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonChangedMainOnManufacturer_KKA.Location = new System.Drawing.Point(0, 44);
-            this.buttonChangedMainOnManufacturer_KKA.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonChangedMainOnManufacturer_KKA.Name = "buttonChangedMainOnManufacturer_KKA";
-            this.buttonChangedMainOnManufacturer_KKA.Size = new System.Drawing.Size(198, 44);
-            this.buttonChangedMainOnManufacturer_KKA.TabIndex = 1;
-            this.buttonChangedMainOnManufacturer_KKA.Text = "Производитель";
-            this.buttonChangedMainOnManufacturer_KKA.UseVisualStyleBackColor = true;
-            this.buttonChangedMainOnManufacturer_KKA.Click += new System.EventHandler(this.buttonChangedMainOnManufacturer_KKA_Click);
+            this.buttonSeller_KKA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSeller_KKA.FlatAppearance.BorderSize = 0;
+            this.buttonSeller_KKA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSeller_KKA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSeller_KKA.ForeColor = System.Drawing.Color.White;
+            this.buttonSeller_KKA.Image = global::Tyuiu.KornilovKA.Sprint7.Project.V12.Properties.Resources.seller2;
+            this.buttonSeller_KKA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSeller_KKA.Location = new System.Drawing.Point(0, 60);
+            this.buttonSeller_KKA.Name = "buttonSeller_KKA";
+            this.buttonSeller_KKA.Size = new System.Drawing.Size(215, 60);
+            this.buttonSeller_KKA.TabIndex = 1;
+            this.buttonSeller_KKA.TabStop = false;
+            this.buttonSeller_KKA.Text = "Продавцы";
+            this.buttonSeller_KKA.UseVisualStyleBackColor = true;
+            this.buttonSeller_KKA.Click += new System.EventHandler(this.buttonSeller_KKA_Click);
             // 
-            // panelDataGrid_KKA
+            // buttonPC_KKA
             // 
-            this.panelDataGrid_KKA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelDataGrid_KKA.Controls.Add(this.textBoxPrice_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.dateTimePickerRelease_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.textBoxCountDisk_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.numericUpDownCountMemory_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.numericUpDownCountCore_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.button2);
-            this.panelDataGrid_KKA.Controls.Add(this.buttonAddNewPC_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.textBoxClockFrequency_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.textBoxTypeCPU_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.textBoxManufacturer_KKA);
-            this.panelDataGrid_KKA.Controls.Add(this.dataGridViewTable_KKA);
-            this.panelDataGrid_KKA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDataGrid_KKA.Location = new System.Drawing.Point(200, 25);
-            this.panelDataGrid_KKA.Name = "panelDataGrid_KKA";
-            this.panelDataGrid_KKA.Size = new System.Drawing.Size(728, 425);
-            this.panelDataGrid_KKA.TabIndex = 2;
+            this.buttonPC_KKA.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPC_KKA.FlatAppearance.BorderSize = 0;
+            this.buttonPC_KKA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPC_KKA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPC_KKA.ForeColor = System.Drawing.Color.White;
+            this.buttonPC_KKA.Image = global::Tyuiu.KornilovKA.Sprint7.Project.V12.Properties.Resources.pc3;
+            this.buttonPC_KKA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPC_KKA.Location = new System.Drawing.Point(0, 0);
+            this.buttonPC_KKA.Name = "buttonPC_KKA";
+            this.buttonPC_KKA.Size = new System.Drawing.Size(215, 60);
+            this.buttonPC_KKA.TabIndex = 0;
+            this.buttonPC_KKA.TabStop = false;
+            this.buttonPC_KKA.Text = "ЭВМ";
+            this.buttonPC_KKA.UseVisualStyleBackColor = true;
+            this.buttonPC_KKA.Click += new System.EventHandler(this.buttonPC_KKA_Click);
             // 
-            // button2
+            // groupBoxDataPC_KKA
             // 
-            this.button2.Location = new System.Drawing.Point(567, 389);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.groupBoxDataPC_KKA.Controls.Add(this.groupBoxDataSeller_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.button3);
+            this.groupBoxDataPC_KKA.Controls.Add(this.button2);
+            this.groupBoxDataPC_KKA.Controls.Add(this.buttonAddNewPC_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.textBoxPrice_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.dateTimePickerRelease_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.textBoxCountDisk_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.numericUpDownCountMemory_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.textBoxClockFrequency_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.numericUpDownCountCore_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.textBoxTypeCPU_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.textBoxManufacturer_KKA);
+            this.groupBoxDataPC_KKA.Controls.Add(this.label1);
+            this.groupBoxDataPC_KKA.Location = new System.Drawing.Point(5, 264);
+            this.groupBoxDataPC_KKA.Name = "groupBoxDataPC_KKA";
+            this.groupBoxDataPC_KKA.Size = new System.Drawing.Size(708, 171);
+            this.groupBoxDataPC_KKA.TabIndex = 2;
+            this.groupBoxDataPC_KKA.TabStop = false;
+            this.groupBoxDataPC_KKA.Visible = false;
             // 
-            // buttonAddNewPC_KKA
+            // groupBoxDataSeller_KKA
             // 
-            this.buttonAddNewPC_KKA.Location = new System.Drawing.Point(20, 389);
-            this.buttonAddNewPC_KKA.Name = "buttonAddNewPC_KKA";
-            this.buttonAddNewPC_KKA.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddNewPC_KKA.TabIndex = 5;
-            this.buttonAddNewPC_KKA.Text = "Добавить";
-            this.buttonAddNewPC_KKA.UseVisualStyleBackColor = true;
-            this.buttonAddNewPC_KKA.Click += new System.EventHandler(this.buttonAddNewPC_KKA_Click);
+            this.groupBoxDataSeller_KKA.Controls.Add(this.textBox1);
+            this.groupBoxDataSeller_KKA.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.groupBoxDataSeller_KKA.Location = new System.Drawing.Point(99, 32);
+            this.groupBoxDataSeller_KKA.Name = "groupBoxDataSeller_KKA";
+            this.groupBoxDataSeller_KKA.Size = new System.Drawing.Size(200, 123);
+            this.groupBoxDataSeller_KKA.TabIndex = 3;
+            this.groupBoxDataSeller_KKA.TabStop = false;
+            this.groupBoxDataSeller_KKA.Text = "groupBox2";
+            this.groupBoxDataSeller_KKA.Visible = false;
             // 
-            // textBoxClockFrequency_KKA
+            // label1
             // 
-            this.textBoxClockFrequency_KKA.Location = new System.Drawing.Point(276, 343);
-            this.textBoxClockFrequency_KKA.Name = "textBoxClockFrequency_KKA";
-            this.textBoxClockFrequency_KKA.Size = new System.Drawing.Size(50, 20);
-            this.textBoxClockFrequency_KKA.TabIndex = 4;
-            // 
-            // textBoxTypeCPU_KKA
-            // 
-            this.textBoxTypeCPU_KKA.Location = new System.Drawing.Point(113, 343);
-            this.textBoxTypeCPU_KKA.Name = "textBoxTypeCPU_KKA";
-            this.textBoxTypeCPU_KKA.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTypeCPU_KKA.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
             // textBoxManufacturer_KKA
             // 
-            this.textBoxManufacturer_KKA.Location = new System.Drawing.Point(7, 343);
+            this.textBoxManufacturer_KKA.Location = new System.Drawing.Point(10, 42);
             this.textBoxManufacturer_KKA.Name = "textBoxManufacturer_KKA";
-            this.textBoxManufacturer_KKA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxManufacturer_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxManufacturer_KKA.TabIndex = 1;
             // 
-            // dataGridViewTable_KKA
+            // textBoxTypeCPU_KKA
             // 
-            this.dataGridViewTable_KKA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTable_KKA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridViewTable_KKA.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewTable_KKA.Name = "dataGridViewTable_KKA";
-            this.dataGridViewTable_KKA.Size = new System.Drawing.Size(726, 312);
-            this.dataGridViewTable_KKA.TabIndex = 0;
-            // 
-            // openFileDialogTable_KKA
-            // 
-            this.openFileDialogTable_KKA.FileName = "openFileDialog1";
+            this.textBoxTypeCPU_KKA.Location = new System.Drawing.Point(117, 42);
+            this.textBoxTypeCPU_KKA.Name = "textBoxTypeCPU_KKA";
+            this.textBoxTypeCPU_KKA.Size = new System.Drawing.Size(100, 23);
+            this.textBoxTypeCPU_KKA.TabIndex = 2;
             // 
             // numericUpDownCountCore_KKA
             // 
-            this.numericUpDownCountCore_KKA.Location = new System.Drawing.Point(219, 343);
+            this.numericUpDownCountCore_KKA.Location = new System.Drawing.Point(224, 42);
             this.numericUpDownCountCore_KKA.Name = "numericUpDownCountCore_KKA";
-            this.numericUpDownCountCore_KKA.Size = new System.Drawing.Size(50, 20);
-            this.numericUpDownCountCore_KKA.TabIndex = 7;
+            this.numericUpDownCountCore_KKA.Size = new System.Drawing.Size(62, 23);
+            this.numericUpDownCountCore_KKA.TabIndex = 3;
+            // 
+            // textBoxClockFrequency_KKA
+            // 
+            this.textBoxClockFrequency_KKA.Location = new System.Drawing.Point(293, 42);
+            this.textBoxClockFrequency_KKA.Name = "textBoxClockFrequency_KKA";
+            this.textBoxClockFrequency_KKA.Size = new System.Drawing.Size(67, 23);
+            this.textBoxClockFrequency_KKA.TabIndex = 4;
             // 
             // numericUpDownCountMemory_KKA
             // 
-            this.numericUpDownCountMemory_KKA.Location = new System.Drawing.Point(333, 343);
+            this.numericUpDownCountMemory_KKA.Location = new System.Drawing.Point(367, 42);
             this.numericUpDownCountMemory_KKA.Name = "numericUpDownCountMemory_KKA";
-            this.numericUpDownCountMemory_KKA.Size = new System.Drawing.Size(50, 20);
-            this.numericUpDownCountMemory_KKA.TabIndex = 8;
+            this.numericUpDownCountMemory_KKA.Size = new System.Drawing.Size(62, 23);
+            this.numericUpDownCountMemory_KKA.TabIndex = 5;
             // 
             // textBoxCountDisk_KKA
             // 
-            this.textBoxCountDisk_KKA.Location = new System.Drawing.Point(390, 343);
+            this.textBoxCountDisk_KKA.Location = new System.Drawing.Point(436, 42);
             this.textBoxCountDisk_KKA.Name = "textBoxCountDisk_KKA";
-            this.textBoxCountDisk_KKA.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCountDisk_KKA.TabIndex = 9;
+            this.textBoxCountDisk_KKA.Size = new System.Drawing.Size(70, 23);
+            this.textBoxCountDisk_KKA.TabIndex = 6;
             // 
             // dateTimePickerRelease_KKA
             // 
             this.dateTimePickerRelease_KKA.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerRelease_KKA.Location = new System.Drawing.Point(496, 343);
+            this.dateTimePickerRelease_KKA.Location = new System.Drawing.Point(513, 42);
             this.dateTimePickerRelease_KKA.Name = "dateTimePickerRelease_KKA";
-            this.dateTimePickerRelease_KKA.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePickerRelease_KKA.TabIndex = 10;
-            // 
-            // buttonChangedMainonPC_KKA
-            // 
-            this.buttonChangedMainonPC_KKA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonChangedMainonPC_KKA.Location = new System.Drawing.Point(0, 0);
-            this.buttonChangedMainonPC_KKA.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonChangedMainonPC_KKA.Name = "buttonChangedMainonPC_KKA";
-            this.buttonChangedMainonPC_KKA.Size = new System.Drawing.Size(198, 44);
-            this.buttonChangedMainonPC_KKA.TabIndex = 0;
-            this.buttonChangedMainonPC_KKA.Text = "ЭВМ";
-            this.buttonChangedMainonPC_KKA.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonChangedMainonPC_KKA.UseVisualStyleBackColor = true;
-            // 
-            // toolStripButtonInfoProgram_KKA
-            // 
-            this.toolStripButtonInfoProgram_KKA.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButtonInfoProgram_KKA.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonInfoProgram_KKA.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonInfoProgram_KKA.Image")));
-            this.toolStripButtonInfoProgram_KKA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonInfoProgram_KKA.Name = "toolStripButtonInfoProgram_KKA";
-            this.toolStripButtonInfoProgram_KKA.Size = new System.Drawing.Size(86, 22);
-            this.toolStripButtonInfoProgram_KKA.Text = "О программе";
-            this.toolStripButtonInfoProgram_KKA.Click += new System.EventHandler(this.toolStripButtonInfoProgram_KKA_Click);
-            // 
-            // toolStripDropDownButtonFile_KKA
-            // 
-            this.toolStripDropDownButtonFile_KKA.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButtonFile_KKA.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItemOpen_KKA,
-            this.ToolStripMenuItemSave_KKA});
-            this.toolStripDropDownButtonFile_KKA.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButtonFile_KKA.Image")));
-            this.toolStripDropDownButtonFile_KKA.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButtonFile_KKA.Name = "toolStripDropDownButtonFile_KKA";
-            this.toolStripDropDownButtonFile_KKA.Size = new System.Drawing.Size(49, 22);
-            this.toolStripDropDownButtonFile_KKA.Text = "Файл";
-            // 
-            // ToolStripMenuItemOpen_KKA
-            // 
-            this.ToolStripMenuItemOpen_KKA.Name = "ToolStripMenuItemOpen_KKA";
-            this.ToolStripMenuItemOpen_KKA.Size = new System.Drawing.Size(180, 22);
-            this.ToolStripMenuItemOpen_KKA.Text = "Открыть";
-            this.ToolStripMenuItemOpen_KKA.Click += new System.EventHandler(this.ToolStripMenuItemOpen_KKA_Click);
-            // 
-            // ToolStripMenuItemSave_KKA
-            // 
-            this.ToolStripMenuItemSave_KKA.Name = "ToolStripMenuItemSave_KKA";
-            this.ToolStripMenuItemSave_KKA.Size = new System.Drawing.Size(180, 22);
-            this.ToolStripMenuItemSave_KKA.Text = "Сохранить";
+            this.dateTimePickerRelease_KKA.Size = new System.Drawing.Size(76, 23);
+            this.dateTimePickerRelease_KKA.TabIndex = 7;
             // 
             // textBoxPrice_KKA
             // 
-            this.textBoxPrice_KKA.Location = new System.Drawing.Point(599, 343);
+            this.textBoxPrice_KKA.Location = new System.Drawing.Point(596, 42);
             this.textBoxPrice_KKA.Name = "textBoxPrice_KKA";
-            this.textBoxPrice_KKA.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPrice_KKA.TabIndex = 11;
+            this.textBoxPrice_KKA.Size = new System.Drawing.Size(100, 23);
+            this.textBoxPrice_KKA.TabIndex = 8;
+            // 
+            // buttonAddNewPC_KKA
+            // 
+            this.buttonAddNewPC_KKA.Location = new System.Drawing.Point(10, 119);
+            this.buttonAddNewPC_KKA.Name = "buttonAddNewPC_KKA";
+            this.buttonAddNewPC_KKA.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddNewPC_KKA.TabIndex = 9;
+            this.buttonAddNewPC_KKA.Text = "button1";
+            this.buttonAddNewPC_KKA.UseVisualStyleBackColor = true;
+            this.buttonAddNewPC_KKA.Click += new System.EventHandler(this.buttonAddNewPC_KKA_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(117, 119);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(224, 119);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(7, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 0;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 450);
-            this.Controls.Add(this.panelDataGrid_KKA);
+            this.ClientSize = new System.Drawing.Size(933, 519);
+            this.Controls.Add(this.panelPC_KKA);
             this.Controls.Add(this.panelMenu_KKA);
-            this.Controls.Add(this.toolStripUpperPanel_KKA);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.Controls.Add(this.panelUpper_KKA);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MinimumSize = new System.Drawing.Size(949, 558);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Учёт ЭВМ";
-            this.toolStripUpperPanel_KKA.ResumeLayout(false);
-            this.toolStripUpperPanel_KKA.PerformLayout();
+            this.Text = "ComputerRecord";
+            this.panelUpper_KKA.ResumeLayout(false);
             this.panelMenu_KKA.ResumeLayout(false);
-            this.panelDataGrid_KKA.ResumeLayout(false);
-            this.panelDataGrid_KKA.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTable_KKA)).EndInit();
+            this.panelPC_KKA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPC_KKA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSeller_KKA)).EndInit();
+            this.panelTitle_KKA.ResumeLayout(false);
+            this.panelTitle_KKA.PerformLayout();
+            this.panelAboutButton_KKA.ResumeLayout(false);
+            this.groupBoxDataPC_KKA.ResumeLayout(false);
+            this.groupBoxDataPC_KKA.PerformLayout();
+            this.groupBoxDataSeller_KKA.ResumeLayout(false);
+            this.groupBoxDataSeller_KKA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCountCore_KKA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCountMemory_KKA)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStripUpperPanel_KKA;
-        private System.Windows.Forms.ToolStripButton toolStripButtonInfoProgram_KKA;
+        private System.Windows.Forms.Panel panelUpper_KKA;
         private System.Windows.Forms.Panel panelMenu_KKA;
-        private System.Windows.Forms.Panel panelDataGrid_KKA;
-        private System.Windows.Forms.DataGridView dataGridViewTable_KKA;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonFile_KKA;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemOpen_KKA;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemSave_KKA;
-        private System.Windows.Forms.Button buttonChangedMainOnManufacturer_KKA;
-        private System.Windows.Forms.Button buttonChangedMainonPC_KKA;
+        private System.Windows.Forms.Panel panelPC_KKA;
+        private System.Windows.Forms.Button buttonSeller_KKA;
+        private System.Windows.Forms.Button buttonPC_KKA;
+        private System.Windows.Forms.DataGridView dataGridViewSeller_KKA;
+        private System.Windows.Forms.DataGridView dataGridViewPC_KKA;
+        private System.Windows.Forms.Panel panelTitle_KKA;
+        private System.Windows.Forms.TextBox textBoxTitle_KKA;
+        private System.Windows.Forms.Panel panelAboutButton_KKA;
+        private System.Windows.Forms.Button buttonAbout_KKA;
         private System.Windows.Forms.Button buttonManual_KKA;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button buttonAddNewPC_KKA;
-        private System.Windows.Forms.TextBox textBoxClockFrequency_KKA;
-        private System.Windows.Forms.TextBox textBoxTypeCPU_KKA;
-        private System.Windows.Forms.TextBox textBoxManufacturer_KKA;
-        private System.Windows.Forms.OpenFileDialog openFileDialogTable_KKA;
-        private System.Windows.Forms.SaveFileDialog saveFileDialogNewData_KKA;
-        private System.Windows.Forms.NumericUpDown numericUpDownCountCore_KKA;
-        private System.Windows.Forms.DateTimePicker dateTimePickerRelease_KKA;
+        private System.Windows.Forms.ToolTip toolTipHelp_KKA;
+        private System.Windows.Forms.GroupBox groupBoxDataPC_KKA;
+        private System.Windows.Forms.GroupBox groupBoxDataSeller_KKA;
         private System.Windows.Forms.TextBox textBoxCountDisk_KKA;
         private System.Windows.Forms.NumericUpDown numericUpDownCountMemory_KKA;
+        private System.Windows.Forms.TextBox textBoxClockFrequency_KKA;
+        private System.Windows.Forms.NumericUpDown numericUpDownCountCore_KKA;
+        private System.Windows.Forms.TextBox textBoxTypeCPU_KKA;
+        private System.Windows.Forms.TextBox textBoxManufacturer_KKA;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxPrice_KKA;
+        private System.Windows.Forms.DateTimePicker dateTimePickerRelease_KKA;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonAddNewPC_KKA;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

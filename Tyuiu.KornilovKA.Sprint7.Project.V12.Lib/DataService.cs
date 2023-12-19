@@ -11,7 +11,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Lib
     {
         public string[,] GetData(string path)
         {
-            string fileData = File.ReadAllText(path);
+            string fileData = File.ReadAllText(path, Encoding.GetEncoding(1251));
             fileData = fileData.Replace('\n', '\r');
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
