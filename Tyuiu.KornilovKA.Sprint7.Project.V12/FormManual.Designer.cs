@@ -56,6 +56,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxTitle_KKA.ForeColor = System.Drawing.Color.White;
             this.textBoxTitle_KKA.Location = new System.Drawing.Point(12, 22);
             this.textBoxTitle_KKA.Name = "textBoxTitle_KKA";
+            this.textBoxTitle_KKA.ReadOnly = true;
             this.textBoxTitle_KKA.Size = new System.Drawing.Size(776, 36);
             this.textBoxTitle_KKA.TabIndex = 0;
             this.textBoxTitle_KKA.TabStop = false;
@@ -103,6 +104,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormManual";

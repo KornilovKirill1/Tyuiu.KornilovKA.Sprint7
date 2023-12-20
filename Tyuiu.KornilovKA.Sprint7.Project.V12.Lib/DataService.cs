@@ -63,7 +63,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Lib
                     str = str + line[i];
                 }
             }
-            File.AppendAllText(path, str + Environment.NewLine);
+            File.AppendAllText(path, str + Environment.NewLine, Encoding.GetEncoding(1251));
             completed = true;
             return completed;
         }
