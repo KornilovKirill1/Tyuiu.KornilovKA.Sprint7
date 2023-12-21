@@ -118,7 +118,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
                 int rows = DataMatrix.GetLength(0);
                 int columns = DataMatrix.GetLength(1);
 
-                dataGridViewPC_KKA.RowCount = rows + 1;
+                dataGridViewPC_KKA.RowCount = rows;
                 dataGridViewPC_KKA.ColumnCount = columns;
 
                 dataGridViewPC_KKA.Columns[0].HeaderText = "Производитель";
@@ -200,7 +200,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
                 int rows = DataMatrix.GetLength(0);
                 int columns = DataMatrix.GetLength(1);
 
-                dataGridViewSeller_KKA.RowCount = rows + 1;
+                dataGridViewSeller_KKA.RowCount = rows;
                 dataGridViewSeller_KKA.ColumnCount = columns;
 
                 dataGridViewSeller_KKA.Columns[0].HeaderText = "Наименование";
@@ -281,12 +281,38 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
 
         private void buttonSaveSeller_KKA_Click(object sender, EventArgs e)
         {
+            string[,] data = new string[dataGridViewSeller_KKA.RowCount, dataGridViewSeller_KKA.ColumnCount];
+            for (int i = 0; i < dataGridViewSeller_KKA.RowCount; i++)
+            {
+                for (int j = 0; j < dataGridViewSeller_KKA.ColumnCount; j++)
+                {
+                    data[i, j] = dataGridViewSeller_KKA.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            bool completed = ds.UpdateData(pathSeller, data);
 
+            if (completed)
+            {
+                MessageBox.Show("Данные обновлены!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void buttonSavePC_KKA_Click(object sender, EventArgs e)
         {
+            string[,] data = new string[dataGridViewPC_KKA.RowCount, dataGridViewPC_KKA.ColumnCount];
+            for (int i = 0; i < dataGridViewPC_KKA.RowCount; i++)
+            {
+                for (int j = 0; j < dataGridViewPC_KKA.ColumnCount; j++)
+                {
+                    data[i, j] = dataGridViewPC_KKA.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            bool completed = ds.UpdateData(pathPersonalComputer, data);
 
+            if (completed)
+            {
+                MessageBox.Show("Данные обновлены!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

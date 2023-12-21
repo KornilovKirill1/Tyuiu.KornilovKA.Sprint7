@@ -67,5 +67,43 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Lib
             completed = true;
             return completed;
         }
+
+        public bool UpdateData(string path, string[,] data)
+        {
+            bool completed = false;
+
+            File.WriteAllText(path, string.Empty);
+
+            string str = "";
+
+            for (int i = 0; i < data.GetLength(0); i++)
+            {
+                for (int j = 0; j < data.GetLength(1); j++)
+                {
+                    if (j != data.GetLength(1) - 1)
+                    {
+                        str = str + data[i, j] + ";";
+                    }
+                    else
+                    {
+                        str = str + data[i, j];
+                    }
+                }
+
+                if (i != data.GetLength(0) - 1)
+                {
+                    File.AppendAllText(path, str + Environment.NewLine, Encoding.GetEncoding(1251));
+                }
+                else
+                {
+                    File.AppendAllText(path, str + Environment.NewLine, Encoding.GetEncoding(1251));
+                }
+
+                str = "";
+            }
+
+            completed = true;
+            return completed;
+        }
     }
 }

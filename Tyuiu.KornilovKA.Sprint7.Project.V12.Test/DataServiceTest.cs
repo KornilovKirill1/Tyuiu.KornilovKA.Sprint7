@@ -14,7 +14,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Test
         {
             DataService ds = new DataService();
 
-            string path = @"C:\Users\KILIAN\source\repos\Tyuiu.KornilovKA.Sprint7\Back-end\personal_computer.csv";
+            string path = @"C:\Users\KILIAN\source\repos\Tyuiu.KornilovKA.Sprint7\Tyuiu.KornilovKA.Sprint7.Project.V12\bin\Back-end\personal_computer.csv";
             string[,] res = ds.GetData(path);
 
             string[,] wait = {
@@ -35,7 +35,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Test
 
             double wait = 2;
 
-            Assert.AreEqual(res, wait);
+            Assert.AreEqual(wait, res);
         }
         [TestMethod]
         public void ValidMinValue()
@@ -48,7 +48,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Test
 
             double wait = 1;
 
-            Assert.AreEqual(res, wait);
+            Assert.AreEqual(wait, res);
         }
         [TestMethod]
         public void ValidMaxValue()
@@ -61,7 +61,29 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Test
 
             double wait = 3;
 
-            Assert.AreEqual(res, wait);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidUpdateData()
+        {
+            DataService ds = new DataService();
+
+            string path = @"C:\Users\KILIAN\Desktop\Копии экселей\test.csv";
+
+            string[,] data = {
+                { "AKA", "AKA", "AKA" },
+                { "AKA", "AKA", "AKA" },
+                { "AKA", "AKA", "AKA" },
+                { "AKA", "AKA", "AKA" },
+                { "AKA", "AKA", "AKA" }
+            };
+
+            bool res = ds.UpdateData(path, data);
+
+            bool wait = true;
+
+            Assert.AreEqual(wait, res);
         }
     }
 }
