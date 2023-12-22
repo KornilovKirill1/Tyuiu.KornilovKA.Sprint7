@@ -85,5 +85,21 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Test
 
             Assert.AreEqual(wait, res);
         }
+        [TestMethod]
+        public void ValidGetPrice()
+        {
+            DataService ds = new DataService();
+
+            string[,] matrix = {
+                { "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456" },
+                { "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456" },
+                { "123456", "123456", "123456", "123456", "123456", "123456", "123456", "123456" }
+            };
+            double[] res = ds.GetPrice(matrix);
+
+            double[] wait = { 123456, 123456, 123456 };
+
+            CollectionAssert.AreEqual(wait, res);
+        }
     }
 }

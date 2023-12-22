@@ -105,5 +105,17 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Lib
             completed = true;
             return completed;
         }
+
+        public double[] GetPrice(string[,] matrix)
+        {
+            double[] priceArray = new double[matrix.GetLength(0)];
+
+            for (int i = 0; i < priceArray.Length; i++)
+            {
+                priceArray[i] = Convert.ToDouble(matrix[i, 7]);
+            }
+
+            return priceArray;
+        }
     }
 }

@@ -23,6 +23,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         DataService ds = new DataService();
         string pathPersonalComputer = @"..\Back-end\personal_computer.csv";
         string pathSeller = @"..\Back-end\selling_company.csv";
+
         private void toolStripButtonInfoProgram_KKA_Click(object sender, EventArgs e)
         {
             FormInfo info = new FormInfo();
