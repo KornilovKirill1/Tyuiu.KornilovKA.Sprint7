@@ -16,8 +16,6 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         public FormMain()
         {
             InitializeComponent();
-            //openFileDialogTable_KKA.Filter = "Значения, разделённые запятыми(*.csv)|*csv|Все файлы(*.*)|*.*";
-            //saveFileDialogNewData_KKA.Filter = "Значения, разделённые запятыми(*.csv)|*csv|Все файлы(*.*)|*.*";
             dateTimePickerRelease_KKA.CustomFormat = "DD MM YYYY";
         }
         DataService ds = new DataService();
@@ -109,7 +107,6 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             labelPhoneNumber_KKA.Visible = false;
             labelURL_KKA.Visible = false;
 
-
             textBoxTitle_KKA.Text = "Электронно-вычислительные машины";
             try
             {
@@ -143,6 +140,9 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
                         dataGridViewPC_KKA.Rows[r].Cells[c].Value = DataMatrix[r, c];
                     }
                 }
+                buttonPC_KKA.BackColor = Color.FromArgb(33, 150, 243);
+                buttonSeller_KKA.BackColor = Color.FromArgb(51, 51, 77);
+                dataGridViewPC_KKA.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -221,6 +221,9 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
                         dataGridViewSeller_KKA.Rows[r].Cells[c].Value = DataMatrix[r, c];
                     }
                 }
+                buttonPC_KKA.BackColor = Color.FromArgb(51, 51, 77);
+                buttonSeller_KKA.BackColor = Color.FromArgb(33, 150, 243);
+                dataGridViewSeller_KKA.ClearSelection();
             }
             catch (Exception ex)
             {
@@ -242,7 +245,11 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
 
         private void buttonSearchPC_KKA_Click(object sender, EventArgs e)
         {
-
+            dataGridViewPC_KKA.ClearSelection();
+            for (int i = 0; i <= dataGridViewPC_KKA.Rows.Count - 1; i++)
+                for (int j = 0; j <= dataGridViewPC_KKA.ColumnCount - 1; j++)
+                    if (dataGridViewPC_KKA.Rows[i].Cells[j].Value != null && dataGridViewPC_KKA.Rows[i].Cells[j].Value.ToString() == textBoxSearch_KKA.Text)
+                        dataGridViewPC_KKA.Rows[i].Selected = true;
         }
 
         private void buttonAddNewSeller_KKA_Click(object sender, EventArgs e)
@@ -314,6 +321,55 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             {
                 MessageBox.Show("Данные обновлены!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void buttonSearchSeller_KKA_Click(object sender, EventArgs e)
+        {
+            dataGridViewSeller_KKA.ClearSelection();
+            for (int i = 0; i <= dataGridViewSeller_KKA.Rows.Count - 1; i++)
+                for (int j = 0; j <= dataGridViewSeller_KKA.ColumnCount - 1; j++)
+                    if (dataGridViewSeller_KKA.Rows[i].Cells[j].Value != null && dataGridViewSeller_KKA.Rows[i].Cells[j].Value.ToString() == textBoxSearch_KKA.Text)
+                        dataGridViewSeller_KKA.Rows[i].Selected = true;
+        }
+
+        private void buttonPC_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Персональные компьютеры";
+        }
+
+        private void buttonSeller_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Продавцы";
+        }
+
+        private void buttonManual_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Руководство пользователя";
+        }
+
+        private void buttonAbout_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "О программе";
+        }
+
+        private void buttonSearchSeller_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Поиск";
+        }
+
+        private void buttonStatistic_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Статистика";
+        }
+
+        private void buttonAddNewSeller_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Добавить";
+        }
+
+        private void buttonSaveSeller_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Сохранить";
         }
     }
 }

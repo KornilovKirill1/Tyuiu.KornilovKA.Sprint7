@@ -29,14 +29,19 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelStatistic_KKA = new System.Windows.Forms.Panel();
+            this.textBoxSumPrice_KKA = new System.Windows.Forms.TextBox();
+            this.labelSumPrice_KKA = new System.Windows.Forms.Label();
+            this.textBoxCountRows_KKA = new System.Windows.Forms.TextBox();
+            this.labelCountRows_KKA = new System.Windows.Forms.Label();
             this.textBoxAvgPrice_KKA = new System.Windows.Forms.TextBox();
             this.labelAvgPrice_KKA = new System.Windows.Forms.Label();
             this.textBoxMaxPrice_KKA = new System.Windows.Forms.TextBox();
@@ -46,21 +51,26 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControlGraph_KKA = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartCirclePC_KKA = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartPillarPC_KKA = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.toolTipHelp_KKA = new System.Windows.Forms.ToolTip(this.components);
             this.panelStatistic_KKA.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControlGraph_KKA.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCirclePC_KKA)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPillarPC_KKA)).BeginInit();
             this.SuspendLayout();
             // 
             // panelStatistic_KKA
             // 
             this.panelStatistic_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.panelStatistic_KKA.Controls.Add(this.textBoxSumPrice_KKA);
+            this.panelStatistic_KKA.Controls.Add(this.labelSumPrice_KKA);
+            this.panelStatistic_KKA.Controls.Add(this.textBoxCountRows_KKA);
+            this.panelStatistic_KKA.Controls.Add(this.labelCountRows_KKA);
             this.panelStatistic_KKA.Controls.Add(this.textBoxAvgPrice_KKA);
             this.panelStatistic_KKA.Controls.Add(this.labelAvgPrice_KKA);
             this.panelStatistic_KKA.Controls.Add(this.textBoxMaxPrice_KKA);
@@ -70,15 +80,61 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.panelStatistic_KKA.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelStatistic_KKA.Location = new System.Drawing.Point(0, 0);
             this.panelStatistic_KKA.Name = "panelStatistic_KKA";
-            this.panelStatistic_KKA.Size = new System.Drawing.Size(235, 396);
+            this.panelStatistic_KKA.Size = new System.Drawing.Size(235, 386);
             this.panelStatistic_KKA.TabIndex = 0;
+            // 
+            // textBoxSumPrice_KKA
+            // 
+            this.textBoxSumPrice_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.textBoxSumPrice_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxSumPrice_KKA.ForeColor = System.Drawing.Color.White;
+            this.textBoxSumPrice_KKA.Location = new System.Drawing.Point(17, 115);
+            this.textBoxSumPrice_KKA.Name = "textBoxSumPrice_KKA";
+            this.textBoxSumPrice_KKA.ReadOnly = true;
+            this.textBoxSumPrice_KKA.Size = new System.Drawing.Size(200, 35);
+            this.textBoxSumPrice_KKA.TabIndex = 9;
+            this.textBoxSumPrice_KKA.TabStop = false;
+            // 
+            // labelSumPrice_KKA
+            // 
+            this.labelSumPrice_KKA.AutoSize = true;
+            this.labelSumPrice_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelSumPrice_KKA.ForeColor = System.Drawing.Color.White;
+            this.labelSumPrice_KKA.Location = new System.Drawing.Point(12, 81);
+            this.labelSumPrice_KKA.Name = "labelSumPrice_KKA";
+            this.labelSumPrice_KKA.Size = new System.Drawing.Size(189, 30);
+            this.labelSumPrice_KKA.TabIndex = 8;
+            this.labelSumPrice_KKA.Text = "Сумма стоимости:";
+            // 
+            // textBoxCountRows_KKA
+            // 
+            this.textBoxCountRows_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.textBoxCountRows_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCountRows_KKA.ForeColor = System.Drawing.Color.White;
+            this.textBoxCountRows_KKA.Location = new System.Drawing.Point(17, 43);
+            this.textBoxCountRows_KKA.Name = "textBoxCountRows_KKA";
+            this.textBoxCountRows_KKA.ReadOnly = true;
+            this.textBoxCountRows_KKA.Size = new System.Drawing.Size(200, 35);
+            this.textBoxCountRows_KKA.TabIndex = 7;
+            this.textBoxCountRows_KKA.TabStop = false;
+            // 
+            // labelCountRows_KKA
+            // 
+            this.labelCountRows_KKA.AutoSize = true;
+            this.labelCountRows_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCountRows_KKA.ForeColor = System.Drawing.Color.White;
+            this.labelCountRows_KKA.Location = new System.Drawing.Point(12, 9);
+            this.labelCountRows_KKA.Name = "labelCountRows_KKA";
+            this.labelCountRows_KKA.Size = new System.Drawing.Size(167, 30);
+            this.labelCountRows_KKA.TabIndex = 6;
+            this.labelCountRows_KKA.Text = "Кол-во записей:";
             // 
             // textBoxAvgPrice_KKA
             // 
             this.textBoxAvgPrice_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
             this.textBoxAvgPrice_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxAvgPrice_KKA.ForeColor = System.Drawing.Color.White;
-            this.textBoxAvgPrice_KKA.Location = new System.Drawing.Point(18, 190);
+            this.textBoxAvgPrice_KKA.Location = new System.Drawing.Point(17, 330);
             this.textBoxAvgPrice_KKA.Name = "textBoxAvgPrice_KKA";
             this.textBoxAvgPrice_KKA.ReadOnly = true;
             this.textBoxAvgPrice_KKA.Size = new System.Drawing.Size(200, 35);
@@ -90,7 +146,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.labelAvgPrice_KKA.AutoSize = true;
             this.labelAvgPrice_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAvgPrice_KKA.ForeColor = System.Drawing.Color.White;
-            this.labelAvgPrice_KKA.Location = new System.Drawing.Point(13, 156);
+            this.labelAvgPrice_KKA.Location = new System.Drawing.Point(12, 296);
             this.labelAvgPrice_KKA.Name = "labelAvgPrice_KKA";
             this.labelAvgPrice_KKA.Size = new System.Drawing.Size(205, 30);
             this.labelAvgPrice_KKA.TabIndex = 4;
@@ -101,7 +157,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxMaxPrice_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
             this.textBoxMaxPrice_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxMaxPrice_KKA.ForeColor = System.Drawing.Color.White;
-            this.textBoxMaxPrice_KKA.Location = new System.Drawing.Point(18, 118);
+            this.textBoxMaxPrice_KKA.Location = new System.Drawing.Point(17, 258);
             this.textBoxMaxPrice_KKA.Name = "textBoxMaxPrice_KKA";
             this.textBoxMaxPrice_KKA.ReadOnly = true;
             this.textBoxMaxPrice_KKA.Size = new System.Drawing.Size(200, 35);
@@ -113,7 +169,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.labelMaxPrice_KKA.AutoSize = true;
             this.labelMaxPrice_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMaxPrice_KKA.ForeColor = System.Drawing.Color.White;
-            this.labelMaxPrice_KKA.Location = new System.Drawing.Point(13, 85);
+            this.labelMaxPrice_KKA.Location = new System.Drawing.Point(12, 225);
             this.labelMaxPrice_KKA.Name = "labelMaxPrice_KKA";
             this.labelMaxPrice_KKA.Size = new System.Drawing.Size(179, 30);
             this.labelMaxPrice_KKA.TabIndex = 2;
@@ -124,7 +180,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxMinPrice_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
             this.textBoxMinPrice_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxMinPrice_KKA.ForeColor = System.Drawing.Color.White;
-            this.textBoxMinPrice_KKA.Location = new System.Drawing.Point(18, 47);
+            this.textBoxMinPrice_KKA.Location = new System.Drawing.Point(17, 187);
             this.textBoxMinPrice_KKA.Name = "textBoxMinPrice_KKA";
             this.textBoxMinPrice_KKA.ReadOnly = true;
             this.textBoxMinPrice_KKA.Size = new System.Drawing.Size(200, 35);
@@ -136,7 +192,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.labelMin_KKA.AutoSize = true;
             this.labelMin_KKA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMin_KKA.ForeColor = System.Drawing.Color.White;
-            this.labelMin_KKA.Location = new System.Drawing.Point(13, 13);
+            this.labelMin_KKA.Location = new System.Drawing.Point(12, 153);
             this.labelMin_KKA.Name = "labelMin_KKA";
             this.labelMin_KKA.Size = new System.Drawing.Size(172, 30);
             this.labelMin_KKA.TabIndex = 0;
@@ -148,7 +204,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(235, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(606, 396);
+            this.panel1.Size = new System.Drawing.Size(606, 386);
             this.panel1.TabIndex = 1;
             // 
             // tabControlGraph_KKA
@@ -159,76 +215,85 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.tabControlGraph_KKA.Location = new System.Drawing.Point(0, 0);
             this.tabControlGraph_KKA.Name = "tabControlGraph_KKA";
             this.tabControlGraph_KKA.SelectedIndex = 0;
-            this.tabControlGraph_KKA.Size = new System.Drawing.Size(606, 396);
+            this.tabControlGraph_KKA.Size = new System.Drawing.Size(606, 386);
             this.tabControlGraph_KKA.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.chart1);
+            this.tabPage1.Controls.Add(this.chartCirclePC_KKA);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(598, 370);
+            this.tabPage1.Size = new System.Drawing.Size(598, 360);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Круговая";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // chart1
+            // chartCirclePC_KKA
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(592, 364);
-            this.chart1.TabIndex = 0;
-            title1.Name = "График";
-            this.chart1.Titles.Add(title1);
+            chartArea3.Name = "ChartArea1";
+            this.chartCirclePC_KKA.ChartAreas.Add(chartArea3);
+            this.chartCirclePC_KKA.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Name = "Legend1";
+            this.chartCirclePC_KKA.Legends.Add(legend3);
+            this.chartCirclePC_KKA.Location = new System.Drawing.Point(3, 3);
+            this.chartCirclePC_KKA.Name = "chartCirclePC_KKA";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "S1";
+            this.chartCirclePC_KKA.Series.Add(series3);
+            this.chartCirclePC_KKA.Size = new System.Drawing.Size(592, 354);
+            this.chartCirclePC_KKA.TabIndex = 0;
+            this.chartCirclePC_KKA.TabStop = false;
+            title2.Name = "График";
+            this.chartCirclePC_KKA.Titles.Add(title2);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.chart2);
+            this.tabPage2.Controls.Add(this.chartPillarPC_KKA);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(598, 370);
+            this.tabPage2.Size = new System.Drawing.Size(598, 360);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Столбчатая";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // chart2
+            // chartPillarPC_KKA
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(3, 3);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(592, 364);
-            this.chart2.TabIndex = 0;
-            this.chart2.Text = "chart2";
+            chartArea4.Name = "ChartArea1";
+            this.chartPillarPC_KKA.ChartAreas.Add(chartArea4);
+            this.chartPillarPC_KKA.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend4.Name = "Legend1";
+            this.chartPillarPC_KKA.Legends.Add(legend4);
+            this.chartPillarPC_KKA.Location = new System.Drawing.Point(3, 3);
+            this.chartPillarPC_KKA.Name = "chartPillarPC_KKA";
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Legend = "Legend1";
+            series4.Name = "S1";
+            this.chartPillarPC_KKA.Series.Add(series4);
+            this.chartPillarPC_KKA.Size = new System.Drawing.Size(592, 354);
+            this.chartPillarPC_KKA.TabIndex = 0;
+            this.chartPillarPC_KKA.TabStop = false;
+            this.chartPillarPC_KKA.Text = "chart2";
+            // 
+            // toolTipHelp_KKA
+            // 
+            this.toolTipHelp_KKA.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // FormStatistic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 396);
+            this.ClientSize = new System.Drawing.Size(841, 386);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelStatistic_KKA);
-            this.MinimumSize = new System.Drawing.Size(857, 435);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MinimumSize = new System.Drawing.Size(857, 425);
             this.Name = "FormStatistic";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Статистика ЭВМ";
             this.Load += new System.EventHandler(this.FormStatistic_Load);
             this.panelStatistic_KKA.ResumeLayout(false);
@@ -236,9 +301,9 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.panel1.ResumeLayout(false);
             this.tabControlGraph_KKA.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCirclePC_KKA)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPillarPC_KKA)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,8 +320,13 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControlGraph_KKA;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartCirclePC_KKA;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPillarPC_KKA;
+        private System.Windows.Forms.TextBox textBoxCountRows_KKA;
+        private System.Windows.Forms.Label labelCountRows_KKA;
+        private System.Windows.Forms.TextBox textBoxSumPrice_KKA;
+        private System.Windows.Forms.Label labelSumPrice_KKA;
+        private System.Windows.Forms.ToolTip toolTipHelp_KKA;
     }
 }

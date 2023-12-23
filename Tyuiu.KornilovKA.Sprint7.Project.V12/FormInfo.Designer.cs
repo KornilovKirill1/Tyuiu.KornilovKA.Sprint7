@@ -43,7 +43,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.buttonDone_KKA.Size = new System.Drawing.Size(75, 23);
             this.buttonDone_KKA.TabIndex = 8;
             this.buttonDone_KKA.TabStop = false;
-            this.buttonDone_KKA.Text = "Ok";
+            this.buttonDone_KKA.Text = "OK";
             this.buttonDone_KKA.UseVisualStyleBackColor = true;
             this.buttonDone_KKA.Click += new System.EventHandler(this.buttonDone_KKA_Click);
             // 

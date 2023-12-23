@@ -101,5 +101,38 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Test
 
             CollectionAssert.AreEqual(wait, res);
         }
+        [TestMethod]
+        public void ValidGetName()
+        {
+            DataService ds = new DataService();
+
+            string[,] matrix = {
+                { "MSI", "123456", "123456", "123456", "123456", "123456", "123456", "123456" },
+                { "ASUS", "123456", "123456", "123456", "123456", "123456", "123456", "123456" },
+                { "Gigabyte", "123456", "123456", "123456", "123456", "123456", "123456", "123456" }
+            };
+            string[] res = ds.GetNameManufacturer(matrix);
+
+            string[] wait = { "MSI", "ASUS", "Gigabyte" };
+
+            CollectionAssert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidGetCountRows()
+        {
+            DataService ds = new DataService();
+
+            string[,] matrix = {
+                { "MSI", "123456", "123456", "123456", "123456", "123456", "123456", "123456" },
+                { "ASUS", "123456", "123456", "123456", "123456", "123456", "123456", "123456" },
+                { "Gigabyte", "123456", "123456", "123456", "123456", "123456", "123456", "123456" }
+            };
+            int res = ds.GetCountRows(matrix);
+
+            int wait = 3;
+
+            Assert.AreEqual(wait, res);
+        }
     }
 }

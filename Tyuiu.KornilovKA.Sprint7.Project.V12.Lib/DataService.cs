@@ -117,5 +117,29 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Lib
 
             return priceArray;
         }
+
+        public string[] GetNameManufacturer(string[,] matrix)
+        {
+            string[] nameArray = new string[matrix.GetLength(0)];
+
+            for (int i = 0; i < nameArray.Length; i++)
+            {
+                nameArray[i] = matrix[i, 0];
+            }
+
+            return nameArray;
+        }
+
+        public int GetCountRows(string[,] matrix)
+        {
+            int countRows = 0;
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                countRows += 1;
+            }
+
+            return countRows;
+        }
     }
 }
