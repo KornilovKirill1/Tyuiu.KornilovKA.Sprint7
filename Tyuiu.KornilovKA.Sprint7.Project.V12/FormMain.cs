@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 using Tyuiu.KornilovKA.Sprint7.Project.V12.Lib;
 
 namespace Tyuiu.KornilovKA.Sprint7.Project.V12
@@ -19,8 +21,8 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             dateTimePickerRelease_KKA.CustomFormat = "DD MM YYYY";
         }
         DataService ds = new DataService();
-        string pathPersonalComputer = @"..\Back-end\personal_computer.csv";
-        string pathSeller = @"..\Back-end\selling_company.csv";
+        string pathPersonalComputer = $@"{Directory.GetCurrentDirectory()}\Back-end\personal_computer.csv";
+        string pathSeller = $@"{Directory.GetCurrentDirectory()}\Back-end\selling_company.csv";
 
         private void toolStripButtonInfoProgram_KKA_Click(object sender, EventArgs e)
         {
@@ -65,47 +67,24 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             }
         }
 
+        private void ShowControls(bool pcVisible, params Control[] controls)
+        {
+            foreach (var control in controls)
+            {
+                control.Visible = pcVisible;
+            }
+        }
+
         private void buttonPC_KKA_Click(object sender, EventArgs e)
         {
-            dataGridViewPC_KKA.Visible = true;
-            dataGridViewSeller_KKA.Visible = false;
-
-            labelSearch_KKA.Visible = true;
-            textBoxSearch_KKA.Visible = true;
-            buttonSearchPC_KKA.Visible = true;
-            buttonSearchSeller_KKA.Visible = false;
-
-            textBoxManufacturer_KKA.Visible = true;
-            textBoxClockFrequency_KKA.Visible = true;
-            textBoxCountDisk_KKA.Visible = true;
-            textBoxTypeCPU_KKA.Visible = true;
-            textBoxPrice_KKA.Visible = true;
-            numericUpDownCountCore_KKA.Visible = true;
-            numericUpDownCountMemory_KKA.Visible = true;
-            dateTimePickerRelease_KKA.Visible = true;
-            buttonAddNewPC_KKA.Visible = true;
-            buttonSavePC_KKA.Visible = true;
-            buttonStatistic_KKA.Visible = true;
-            labelClockFrequency_KKA.Visible = true;
-            labelCountCore_KKA.Visible = true;
-            labelCountDisk_KKA.Visible = true;
-            labelCountMemory_KKA.Visible = true;
-            labelManufacturer_KKA.Visible = true;
-            labelPrice_KKA.Visible = true;
-            labelTypeCPU_KKA.Visible = true;
-            labelRelease_KKA.Visible = true;
-
-            dataGridViewSeller_KKA.Visible = false;
-            textBoxNameSeller_KKA.Visible = false;
-            textBoxPhoneNumber_KKA.Visible = false;
-            textBoxURL_KKA.Visible = false;
-            textBoxAddress_KKA.Visible = false;
-            buttonAddNewSeller_KKA.Visible = false;
-            buttonSaveSeller_KKA.Visible = false;
-            labelAddress_KKA.Visible = false;
-            labelNameSeller_KKA.Visible = false;
-            labelPhoneNumber_KKA.Visible = false;
-            labelURL_KKA.Visible = false;
+            ShowControls(true, dataGridViewPC_KKA, labelSearch_KKA, textBoxSearch_KKA, buttonSearchPC_KKA, textBoxManufacturer_KKA,
+                textBoxClockFrequency_KKA, textBoxCountDisk_KKA, textBoxTypeCPU_KKA, textBoxPrice_KKA, numericUpDownCountCore_KKA,
+                numericUpDownCountMemory_KKA, dateTimePickerRelease_KKA, buttonAddNewPC_KKA, buttonSavePC_KKA, buttonStatistic_KKA,
+                labelClockFrequency_KKA, labelCountCore_KKA, labelCountDisk_KKA, labelCountMemory_KKA, labelManufacturer_KKA,
+                labelPrice_KKA, labelTypeCPU_KKA, labelRelease_KKA);
+            ShowControls(false, buttonSearchSeller_KKA, dataGridViewSeller_KKA, dataGridViewSeller_KKA, textBoxNameSeller_KKA,
+                textBoxPhoneNumber_KKA, textBoxURL_KKA, textBoxAddress_KKA, buttonAddNewSeller_KKA, buttonSaveSeller_KKA,
+                labelAddress_KKA, labelNameSeller_KKA, labelPhoneNumber_KKA, labelURL_KKA);
 
             textBoxTitle_KKA.Text = "Электронно-вычислительные машины";
             try
@@ -152,45 +131,14 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
 
         private void buttonSeller_KKA_Click(object sender, EventArgs e)
         {
-            dataGridViewPC_KKA.Visible = false;
-            dataGridViewSeller_KKA.Visible = true;
-
-            labelSearch_KKA.Visible = true;
-            textBoxSearch_KKA.Visible = true;
-            buttonSearchPC_KKA.Visible = false;
-            buttonSearchSeller_KKA.Visible = true;
-
-            textBoxManufacturer_KKA.Visible = false;
-            textBoxClockFrequency_KKA.Visible = false;
-            textBoxCountDisk_KKA.Visible = false;
-            textBoxTypeCPU_KKA.Visible = false;
-            textBoxPrice_KKA.Visible = false;
-            numericUpDownCountCore_KKA.Visible = false;
-            numericUpDownCountMemory_KKA.Visible = false;
-            dateTimePickerRelease_KKA.Visible = false;
-            buttonAddNewPC_KKA.Visible = false;
-            buttonSavePC_KKA.Visible = false;
-            buttonStatistic_KKA.Visible = false;
-            labelClockFrequency_KKA.Visible = false;
-            labelCountCore_KKA.Visible = false;
-            labelCountDisk_KKA.Visible = false;
-            labelCountMemory_KKA.Visible = false;
-            labelManufacturer_KKA.Visible = false;
-            labelPrice_KKA.Visible = false;
-            labelTypeCPU_KKA.Visible = false;
-            labelRelease_KKA.Visible = false;
-
-            dataGridViewSeller_KKA.Visible = true;
-            textBoxNameSeller_KKA.Visible = true;
-            textBoxPhoneNumber_KKA.Visible = true;
-            textBoxURL_KKA.Visible = true;
-            textBoxAddress_KKA.Visible = true;
-            buttonAddNewSeller_KKA.Visible = true;
-            buttonSaveSeller_KKA.Visible = true;
-            labelAddress_KKA.Visible = true;
-            labelNameSeller_KKA.Visible = true;
-            labelPhoneNumber_KKA.Visible = true;
-            labelURL_KKA.Visible = true;
+            ShowControls(false, dataGridViewPC_KKA, buttonSearchPC_KKA, textBoxManufacturer_KKA,
+                textBoxClockFrequency_KKA, textBoxCountDisk_KKA, textBoxTypeCPU_KKA, textBoxPrice_KKA, numericUpDownCountCore_KKA,
+                numericUpDownCountMemory_KKA, dateTimePickerRelease_KKA, buttonAddNewPC_KKA, buttonSavePC_KKA, buttonStatistic_KKA,
+                labelClockFrequency_KKA, labelCountCore_KKA, labelCountDisk_KKA, labelCountMemory_KKA, labelManufacturer_KKA,
+                labelPrice_KKA, labelTypeCPU_KKA, labelRelease_KKA);
+            ShowControls(true, buttonSearchSeller_KKA, labelSearch_KKA, textBoxSearch_KKA, dataGridViewSeller_KKA, dataGridViewSeller_KKA, textBoxNameSeller_KKA,
+                textBoxPhoneNumber_KKA, textBoxURL_KKA, textBoxAddress_KKA, buttonAddNewSeller_KKA, buttonSaveSeller_KKA,
+                labelAddress_KKA, labelNameSeller_KKA, labelPhoneNumber_KKA, labelURL_KKA);
 
             textBoxTitle_KKA.Text = "Фирмы-реализаторы";
             try
@@ -339,7 +287,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
 
         private void buttonSeller_KKA_MouseEnter(object sender, EventArgs e)
         {
-            toolTipHelp_KKA.ToolTipTitle = "Продавцы";
+            toolTipHelp_KKA.ToolTipTitle = "Фирмы-реализаторы";
         }
 
         private void buttonManual_KKA_MouseEnter(object sender, EventArgs e)
@@ -370,6 +318,89 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         private void buttonSaveSeller_KKA_MouseEnter(object sender, EventArgs e)
         {
             toolTipHelp_KKA.ToolTipTitle = "Сохранить";
+        }
+
+        private void textBoxManufacturer_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Наименование производителя";
+        }
+
+        private void textBoxTypeCPU_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Тип процессора";
+        }
+
+        private void numericUpDownCountCore_KKA_Enter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Количество ядер процессора";
+        }
+
+        private void textBoxClockFrequency_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Тактовая частота процессора";
+        }
+
+        private void textBoxCountDisk_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Объем жесткого диска";
+        }
+
+        private void dateTimePickerRelease_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Дата выпуска ЭВМ";
+        }
+
+        private void textBoxPrice_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Стоимость ЭВМ";
+        }
+
+        private void textBoxNameSeller_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Наименование фирмы";
+        }
+
+        private void textBoxAddress_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Адрес фирмы";
+        }
+
+        private void textBoxPhoneNumber_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Номер телефона фирмы";
+        }
+
+        private void textBoxURL_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "URL-ссылка";
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var res = MessageBox.Show("Вы действительно хотите выйти?", "Выход из программы",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            e.Cancel = !(res == DialogResult.Yes);
+        }
+
+        private void textBoxPrice_KKA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number) && number != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxClockFrequency_KKA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number) && number != 8 && number != ',')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

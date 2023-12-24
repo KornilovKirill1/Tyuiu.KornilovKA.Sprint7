@@ -30,7 +30,9 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelUpper_KKA = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitle_KKA = new System.Windows.Forms.Panel();
             this.textBoxTitle_KKA = new System.Windows.Forms.TextBox();
             this.panelMenu_KKA = new System.Windows.Forms.Panel();
@@ -77,6 +79,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxNameSeller_KKA = new System.Windows.Forms.TextBox();
             this.toolTipHelp_KKA = new System.Windows.Forms.ToolTip(this.components);
             this.panelUpper_KKA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitle_KKA.SuspendLayout();
             this.panelMenu_KKA.SuspendLayout();
             this.panelAboutButton_KKA.SuspendLayout();
@@ -90,12 +93,23 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // panelUpper_KKA
             // 
             this.panelUpper_KKA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(105)))), ((int)(((byte)(170)))));
+            this.panelUpper_KKA.Controls.Add(this.pictureBox1);
             this.panelUpper_KKA.Controls.Add(this.panelTitle_KKA);
             this.panelUpper_KKA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUpper_KKA.Location = new System.Drawing.Point(0, 0);
             this.panelUpper_KKA.Name = "panelUpper_KKA";
             this.panelUpper_KKA.Size = new System.Drawing.Size(986, 76);
             this.panelUpper_KKA.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tyuiu.KornilovKA.Sprint7.Project.V12.Properties.Resources.true_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(205, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // panelTitle_KKA
             // 
@@ -301,11 +315,14 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             this.textBoxManufacturer_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxManufacturer_KKA.Location = new System.Drawing.Point(4, 347);
+            this.textBoxManufacturer_KKA.MaxLength = 70;
             this.textBoxManufacturer_KKA.Name = "textBoxManufacturer_KKA";
             this.textBoxManufacturer_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxManufacturer_KKA.TabIndex = 2;
             this.textBoxManufacturer_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxManufacturer_KKA, "Ввод наименования производителя (все символы)");
             this.textBoxManufacturer_KKA.Visible = false;
+            this.textBoxManufacturer_KKA.MouseEnter += new System.EventHandler(this.textBoxManufacturer_KKA_MouseEnter);
             // 
             // buttonSearchSeller_KKA
             // 
@@ -364,11 +381,14 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             this.textBoxTypeCPU_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxTypeCPU_KKA.Location = new System.Drawing.Point(111, 347);
+            this.textBoxTypeCPU_KKA.MaxLength = 70;
             this.textBoxTypeCPU_KKA.Name = "textBoxTypeCPU_KKA";
             this.textBoxTypeCPU_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxTypeCPU_KKA.TabIndex = 3;
             this.textBoxTypeCPU_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxTypeCPU_KKA, "Ввод типа процессора (любые символы)");
             this.textBoxTypeCPU_KKA.Visible = false;
+            this.textBoxTypeCPU_KKA.MouseEnter += new System.EventHandler(this.textBoxTypeCPU_KKA_MouseEnter);
             // 
             // labelSearch_KKA
             // 
@@ -408,12 +428,19 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // numericUpDownCountCore_KKA
             // 
             this.numericUpDownCountCore_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numericUpDownCountCore_KKA.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.numericUpDownCountCore_KKA.Location = new System.Drawing.Point(218, 347);
             this.numericUpDownCountCore_KKA.Name = "numericUpDownCountCore_KKA";
             this.numericUpDownCountCore_KKA.Size = new System.Drawing.Size(71, 23);
             this.numericUpDownCountCore_KKA.TabIndex = 4;
             this.numericUpDownCountCore_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.numericUpDownCountCore_KKA, "Ввод количества ядер в процессоре (только числа)");
             this.numericUpDownCountCore_KKA.Visible = false;
+            this.numericUpDownCountCore_KKA.Enter += new System.EventHandler(this.numericUpDownCountCore_KKA_Enter);
             // 
             // dataGridViewSeller_KKA
             // 
@@ -462,7 +489,10 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxClockFrequency_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxClockFrequency_KKA.TabIndex = 5;
             this.textBoxClockFrequency_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxClockFrequency_KKA, "Ввод тактовой частоты процессора (только числа)");
             this.textBoxClockFrequency_KKA.Visible = false;
+            this.textBoxClockFrequency_KKA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxClockFrequency_KKA_KeyPress);
+            this.textBoxClockFrequency_KKA.MouseEnter += new System.EventHandler(this.textBoxClockFrequency_KKA_MouseEnter);
             // 
             // labelRelease_KKA
             // 
@@ -500,11 +530,17 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // numericUpDownCountMemory_KKA
             // 
             this.numericUpDownCountMemory_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numericUpDownCountMemory_KKA.Increment = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.numericUpDownCountMemory_KKA.Location = new System.Drawing.Point(401, 347);
             this.numericUpDownCountMemory_KKA.Name = "numericUpDownCountMemory_KKA";
             this.numericUpDownCountMemory_KKA.Size = new System.Drawing.Size(45, 23);
             this.numericUpDownCountMemory_KKA.TabIndex = 6;
             this.numericUpDownCountMemory_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.numericUpDownCountMemory_KKA, "Ввод объема оперативной памяти (только числа)");
             this.numericUpDownCountMemory_KKA.Visible = false;
             // 
             // labelCountDisk_KKA
@@ -522,11 +558,15 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             this.textBoxCountDisk_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxCountDisk_KKA.Location = new System.Drawing.Point(452, 347);
+            this.textBoxCountDisk_KKA.MaxLength = 10;
             this.textBoxCountDisk_KKA.Name = "textBoxCountDisk_KKA";
             this.textBoxCountDisk_KKA.Size = new System.Drawing.Size(97, 23);
             this.textBoxCountDisk_KKA.TabIndex = 7;
             this.textBoxCountDisk_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxCountDisk_KKA, "Ввод объема жесткого диска (только числа)");
             this.textBoxCountDisk_KKA.Visible = false;
+            this.textBoxCountDisk_KKA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KKA_KeyPress);
+            this.textBoxCountDisk_KKA.MouseEnter += new System.EventHandler(this.textBoxCountDisk_KKA_MouseEnter);
             // 
             // buttonAddNewPC_KKA
             // 
@@ -554,7 +594,9 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxURL_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxURL_KKA.TabIndex = 28;
             this.textBoxURL_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxURL_KKA, "Ввод URL-ссылки на сайт фирмы-реализатора");
             this.textBoxURL_KKA.Visible = false;
+            this.textBoxURL_KKA.MouseEnter += new System.EventHandler(this.textBoxURL_KKA_MouseEnter);
             // 
             // labelCountMemory_KKA
             // 
@@ -576,7 +618,9 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.dateTimePickerRelease_KKA.Size = new System.Drawing.Size(101, 23);
             this.dateTimePickerRelease_KKA.TabIndex = 8;
             this.dateTimePickerRelease_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.dateTimePickerRelease_KKA, "Ввод даты выпуска (только дата)");
             this.dateTimePickerRelease_KKA.Visible = false;
+            this.dateTimePickerRelease_KKA.MouseEnter += new System.EventHandler(this.dateTimePickerRelease_KKA_MouseEnter);
             // 
             // buttonSavePC_KKA
             // 
@@ -600,11 +644,14 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             this.textBoxPhoneNumber_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxPhoneNumber_KKA.Location = new System.Drawing.Point(219, 347);
+            this.textBoxPhoneNumber_KKA.MaxLength = 11;
             this.textBoxPhoneNumber_KKA.Name = "textBoxPhoneNumber_KKA";
             this.textBoxPhoneNumber_KKA.Size = new System.Drawing.Size(104, 23);
             this.textBoxPhoneNumber_KKA.TabIndex = 27;
             this.textBoxPhoneNumber_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxPhoneNumber_KKA, "Ввод номера телефона фирмы-реализатора");
             this.textBoxPhoneNumber_KKA.Visible = false;
+            this.textBoxPhoneNumber_KKA.MouseEnter += new System.EventHandler(this.textBoxPhoneNumber_KKA_MouseEnter);
             // 
             // labelClockFrequency_KKA
             // 
@@ -621,11 +668,15 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             this.textBoxPrice_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxPrice_KKA.Location = new System.Drawing.Point(662, 347);
+            this.textBoxPrice_KKA.MaxLength = 15;
             this.textBoxPrice_KKA.Name = "textBoxPrice_KKA";
             this.textBoxPrice_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxPrice_KKA.TabIndex = 9;
             this.textBoxPrice_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxPrice_KKA, "Ввод стоимости ЭВМ (только числа)");
             this.textBoxPrice_KKA.Visible = false;
+            this.textBoxPrice_KKA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrice_KKA_KeyPress);
+            this.textBoxPrice_KKA.MouseEnter += new System.EventHandler(this.textBoxPrice_KKA_MouseEnter);
             // 
             // buttonStatistic_KKA
             // 
@@ -649,11 +700,14 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             this.textBoxAddress_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxAddress_KKA.Location = new System.Drawing.Point(112, 347);
+            this.textBoxAddress_KKA.MaxLength = 70;
             this.textBoxAddress_KKA.Name = "textBoxAddress_KKA";
             this.textBoxAddress_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxAddress_KKA.TabIndex = 26;
             this.textBoxAddress_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxAddress_KKA, "Ввод адреса фирмы-реализатора (любые символы)");
             this.textBoxAddress_KKA.Visible = false;
+            this.textBoxAddress_KKA.MouseEnter += new System.EventHandler(this.textBoxAddress_KKA_MouseEnter);
             // 
             // labelCountCore_KKA
             // 
@@ -692,11 +746,14 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             this.textBoxNameSeller_KKA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxNameSeller_KKA.Location = new System.Drawing.Point(5, 347);
+            this.textBoxNameSeller_KKA.MaxLength = 70;
             this.textBoxNameSeller_KKA.Name = "textBoxNameSeller_KKA";
             this.textBoxNameSeller_KKA.Size = new System.Drawing.Size(100, 23);
             this.textBoxNameSeller_KKA.TabIndex = 25;
             this.textBoxNameSeller_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxNameSeller_KKA, "Ввод наименования фирмы-реализатора (любые символы)");
             this.textBoxNameSeller_KKA.Visible = false;
+            this.textBoxNameSeller_KKA.MouseEnter += new System.EventHandler(this.textBoxNameSeller_KKA_MouseEnter);
             // 
             // toolTipHelp_KKA
             // 
@@ -712,11 +769,14 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.Controls.Add(this.panelMenu_KKA);
             this.Controls.Add(this.panelUpper_KKA);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1002, 558);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ComputerRecord";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.panelUpper_KKA.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle_KKA.ResumeLayout(false);
             this.panelTitle_KKA.PerformLayout();
             this.panelMenu_KKA.ResumeLayout(false);
@@ -779,6 +839,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         private System.Windows.Forms.TextBox textBoxPhoneNumber_KKA;
         private System.Windows.Forms.TextBox textBoxAddress_KKA;
         private System.Windows.Forms.TextBox textBoxNameSeller_KKA;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

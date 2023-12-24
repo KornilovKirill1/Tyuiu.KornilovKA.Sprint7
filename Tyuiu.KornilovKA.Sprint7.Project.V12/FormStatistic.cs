@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
 
 using Tyuiu.KornilovKA.Sprint7.Project.V12.Lib;
 
@@ -19,7 +20,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         {
             InitializeComponent();
         }
-        string path = @"..\Back-end\personal_computer.csv";
+        string path = $@"{Directory.GetCurrentDirectory()}\Back-end\personal_computer.csv";
         DataService ds = new DataService();
         private void FormStatistic_Load(object sender, EventArgs e)
         {
@@ -67,6 +68,31 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
                 chartPillarPC_KKA.Series["S1"].IsValueShownAsLabel = true;
                 chartPillarPC_KKA.Series["S1"].Points.AddXY(nameManufacturer[i], pricePC[i]);
             }
+        }
+
+        private void textBoxCountRows_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Количество записей";
+        }
+
+        private void textBoxSumPrice_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Сумма";
+        }
+
+        private void textBoxMinPrice_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Минимальное значение";
+        }
+
+        private void textBoxMaxPrice_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Максимальное значение";
+        }
+
+        private void textBoxAvgPrice_KKA_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipHelp_KKA.ToolTipTitle = "Среднее значение";
         }
     }
 }

@@ -30,13 +30,13 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelStatistic_KKA = new System.Windows.Forms.Panel();
             this.textBoxSumPrice_KKA = new System.Windows.Forms.TextBox();
             this.labelSumPrice_KKA = new System.Windows.Forms.Label();
@@ -94,6 +94,8 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxSumPrice_KKA.Size = new System.Drawing.Size(200, 35);
             this.textBoxSumPrice_KKA.TabIndex = 9;
             this.textBoxSumPrice_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxSumPrice_KKA, "Сумма стоимости всех ЭВМ");
+            this.textBoxSumPrice_KKA.MouseEnter += new System.EventHandler(this.textBoxSumPrice_KKA_MouseEnter);
             // 
             // labelSumPrice_KKA
             // 
@@ -117,6 +119,8 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxCountRows_KKA.Size = new System.Drawing.Size(200, 35);
             this.textBoxCountRows_KKA.TabIndex = 7;
             this.textBoxCountRows_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxCountRows_KKA, "Количество записей ЭВМ");
+            this.textBoxCountRows_KKA.MouseEnter += new System.EventHandler(this.textBoxCountRows_KKA_MouseEnter);
             // 
             // labelCountRows_KKA
             // 
@@ -140,6 +144,8 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxAvgPrice_KKA.Size = new System.Drawing.Size(200, 35);
             this.textBoxAvgPrice_KKA.TabIndex = 5;
             this.textBoxAvgPrice_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxAvgPrice_KKA, "Средняя стоимость всех ЭВМ");
+            this.textBoxAvgPrice_KKA.MouseEnter += new System.EventHandler(this.textBoxAvgPrice_KKA_MouseEnter);
             // 
             // labelAvgPrice_KKA
             // 
@@ -163,6 +169,8 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxMaxPrice_KKA.Size = new System.Drawing.Size(200, 35);
             this.textBoxMaxPrice_KKA.TabIndex = 3;
             this.textBoxMaxPrice_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxMaxPrice_KKA, "Максимальная стоимость ЭВМ");
+            this.textBoxMaxPrice_KKA.MouseEnter += new System.EventHandler(this.textBoxMaxPrice_KKA_MouseEnter);
             // 
             // labelMaxPrice_KKA
             // 
@@ -186,6 +194,8 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             this.textBoxMinPrice_KKA.Size = new System.Drawing.Size(200, 35);
             this.textBoxMinPrice_KKA.TabIndex = 1;
             this.textBoxMinPrice_KKA.TabStop = false;
+            this.toolTipHelp_KKA.SetToolTip(this.textBoxMinPrice_KKA, "Минимальная стоимость ЭВМ");
+            this.textBoxMinPrice_KKA.MouseEnter += new System.EventHandler(this.textBoxMinPrice_KKA_MouseEnter);
             // 
             // labelMin_KKA
             // 
@@ -231,23 +241,23 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             // chartCirclePC_KKA
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartCirclePC_KKA.ChartAreas.Add(chartArea3);
+            chartArea11.Name = "ChartArea1";
+            this.chartCirclePC_KKA.ChartAreas.Add(chartArea11);
             this.chartCirclePC_KKA.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartCirclePC_KKA.Legends.Add(legend3);
+            legend11.Name = "Legend1";
+            this.chartCirclePC_KKA.Legends.Add(legend11);
             this.chartCirclePC_KKA.Location = new System.Drawing.Point(3, 3);
             this.chartCirclePC_KKA.Name = "chartCirclePC_KKA";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "S1";
-            this.chartCirclePC_KKA.Series.Add(series3);
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series11.Legend = "Legend1";
+            series11.Name = "S1";
+            this.chartCirclePC_KKA.Series.Add(series11);
             this.chartCirclePC_KKA.Size = new System.Drawing.Size(592, 354);
             this.chartCirclePC_KKA.TabIndex = 0;
             this.chartCirclePC_KKA.TabStop = false;
-            title2.Name = "График";
-            this.chartCirclePC_KKA.Titles.Add(title2);
+            title6.Name = "График";
+            this.chartCirclePC_KKA.Titles.Add(title6);
             // 
             // tabPage2
             // 
@@ -262,18 +272,18 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
             // 
             // chartPillarPC_KKA
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartPillarPC_KKA.ChartAreas.Add(chartArea4);
+            chartArea12.Name = "ChartArea1";
+            this.chartPillarPC_KKA.ChartAreas.Add(chartArea12);
             this.chartPillarPC_KKA.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chartPillarPC_KKA.Legends.Add(legend4);
+            legend12.Name = "Legend1";
+            this.chartPillarPC_KKA.Legends.Add(legend12);
             this.chartPillarPC_KKA.Location = new System.Drawing.Point(3, 3);
             this.chartPillarPC_KKA.Name = "chartPillarPC_KKA";
-            series4.ChartArea = "ChartArea1";
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.Name = "S1";
-            this.chartPillarPC_KKA.Series.Add(series4);
+            series12.ChartArea = "ChartArea1";
+            series12.IsVisibleInLegend = false;
+            series12.Legend = "Legend1";
+            series12.Name = "S1";
+            this.chartPillarPC_KKA.Series.Add(series12);
             this.chartPillarPC_KKA.Size = new System.Drawing.Size(592, 354);
             this.chartPillarPC_KKA.TabIndex = 0;
             this.chartPillarPC_KKA.TabStop = false;
