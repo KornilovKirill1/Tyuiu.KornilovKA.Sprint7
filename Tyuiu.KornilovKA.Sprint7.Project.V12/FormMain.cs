@@ -387,7 +387,7 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12
         {
             char number = e.KeyChar;
 
-            if (!Char.IsDigit(number) && number != 8)
+            if (!Char.IsDigit(number) && number != 8 && number != ',')
             {
                 e.Handled = true;
             }

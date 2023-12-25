@@ -63,6 +63,20 @@ namespace Tyuiu.KornilovKA.Sprint7.Project.V12.Test
 
             Assert.AreEqual(wait, res);
         }
+        [TestMethod]
+        public void ValidAddNewData()
+        {
+            DataService ds = new DataService();
+
+            string path = @"C:\Users\KILIAN\Desktop\Копии экселей\test.csv";
+            string[] arrayNums = { "Test", "Test", "Test" };
+
+            bool res = ds.AddNewData(path, arrayNums);
+
+            bool wait = true;
+
+            Assert.AreEqual(wait, res);
+        }
 
         [TestMethod]
         public void ValidUpdateData()
